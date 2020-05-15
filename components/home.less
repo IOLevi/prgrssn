@@ -1,0 +1,67 @@
+body {
+  background: white;
+  font-family: sans-serif;
+  color: black;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-weight: 800;
+}
+
+.flexContainer {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flexItem {
+  height: 200px;
+  width: 200px;
+  background-image: url('/prgrssn-logo400x400.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:  cover;
+  display: flex;
+  margin: 5px 10px;
+  align-items: center;
+  justify-content: center;
+}
+.flexItem:hover {
+  .releaseTag {
+    visibility: visible;
+  }
+}
+
+.wesMainContainer {
+  width: 100%;
+}
+
+.wesImage {
+  width: 100%;
+}
+
+.releaseText {
+  font-size: 32px;
+  padding-left: 10px;
+}
+
+.releaseTag {
+  visibility: hidden;
+  text-align: center;
+  position: relative;
+  top: -40px;
+  width: 100%;
+  height: 40px;
+  background: rgba(154, 57, 57, 0.5);
+}
+
+.bannerContainer {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  //background-image: url('/intrastellarBanner.jpeg');
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-size:  cover;
+}
+.outNowBanner {
+  width: 100%;
+}
