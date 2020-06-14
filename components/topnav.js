@@ -4,7 +4,7 @@ export default function Topnav() {
 
     return (
         <div className={styles.topnav}>
-            This is top nav
+            prgrssnrecords
         </div>
     )
 }
