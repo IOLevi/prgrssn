@@ -10,7 +10,9 @@
   "dependencies": {
     "@zeit/next-less": "^1.0.1",
     "less": "^3.11.1",
+    "mongodb": "^3.5.9",
     "next": "9.4.0",
+    "next-connect": "^0.7.1",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
