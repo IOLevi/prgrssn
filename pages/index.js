@@ -6,23 +6,20 @@ import axios from 'axios';
 
 export default function Home({data}) {
 
-    useEffect(() => {
-    //    get content cards from backend
-    });
-
     const populateContentCards = () => {
     //    create array of content cards
-        data.releases.map((release)=>{
+        console.log(data);
+        return data.releases.map((release, index)=>{
             return (
-                <div className={styles.flexItem}>
+                <div className={styles.flexItem} key={index}>
                     {release.artist}
                     {release.songTitle}
                 </div>
             )
-        })
+        });
     };
 
-    // let contentCards = populateContentCards();
+    let contentCards = populateContentCards();
 
     return (
         <>
@@ -34,17 +31,16 @@ export default function Home({data}) {
                 <div className={styles.flexItem}>
                     This is a test
                 </div>
-                {/*{contentCards}*/}
-
+                {contentCards}
             </main>
         </div>
         </>
     )
 }
 
-// export async function getStaticProps() {
-//     const res = await axios.get('https://localhost:3000/api/releases');
-//     const data = await res.json();
-//
-//     return {props: {data,}}
-// }
+export async function getStaticProps() {
+    const res = await axios.get('http://localhost:3000/api/releases');
+    const data = res.data;
+
+    return {props: {data,}}
+}
