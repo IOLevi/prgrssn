@@ -23,19 +23,23 @@ export default function Home({data}) {
 
     return (
         <>
-        <Header/>
-        <Topnav/>
+            <Header/>
+            <Topnav/>
 
-        <div>
-            <main className={styles.flexContainer}>
-                <div className={styles.flexItem}>
-                    This is a test
-                </div>
-                {contentCards}
-            </main>
-        </div>
+            <div className={styles.wesMainContainer}>
+                <img src={'/wesgarage.jpeg'} alt={"Le Youth"} className={styles.wesImage}/>
+            </div>
+
+            <div>
+                <main className={styles.flexContainer}>
+                    <div className={styles.flexItem}>
+                        This is a test
+                    </div>
+                    {contentCards}
+                </main>
+            </div>
         </>
-    )
+    );
 }
 
 export async function getStaticProps() {
