@@ -30,6 +30,10 @@ export default function Home({data}) {
                 <img src={'/wesgarage.jpeg'} alt={"Le Youth"} className={styles.wesImage}/>
             </div>
 
+            <div className={styles.releaseText}>
+                Releases
+            </div>
+
             <div>
                 <main className={styles.flexContainer}>
                     <div className={styles.flexItem}>
