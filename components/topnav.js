@@ -5,9 +5,9 @@ export default function Topnav() {
     return (
         <div className={styles.topnavContainer}>
             <div className={styles.topnav}>
-                <div className={styles.prgrssnTag}>
+                <span className={styles.prgrssnTag}>
                     prgrssnrecords
-                </div>
+                </span>
             </div>
         </div>
 

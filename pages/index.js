@@ -10,10 +10,12 @@ export default function Home({data}) {
     //    create array of content cards
         console.log(data);
         return data.releases.map((release, index)=>{
+            // rewrite the conditional URL as a prop like if (release.releaseUrl) -> inputProp = {style: {background-image:. ... }
             return (
-                <div className={styles.flexItem} key={index}>
-                    {release.artist}
-                    {release.songTitle}
+                <div className={styles.flexItem} key={index} {...(release.imageUrl && {style: {'background-image': `url(${release.imageUrl})`}})} >
+                    <div className={styles.releaseTag}>
+                        {release.artist} - {release.songTitle}
+                    </div>
                 </div>
             )
         });
@@ -37,7 +39,9 @@ export default function Home({data}) {
             <div>
                 <main className={styles.flexContainer}>
                     <div className={styles.flexItem}>
-                        This is a test
+                        <div className={styles.releaseTag}>
+                            This is a test
+                        </div>
                     </div>
                     {contentCards}
                 </main>
