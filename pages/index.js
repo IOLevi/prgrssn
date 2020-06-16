@@ -40,7 +40,12 @@ export default function Home({data}) {
                 <main className={styles.flexContainer}>
                     <div className={styles.flexItem}>
                         <div className={styles.releaseTag}>
-                            This is a test
+                            This is a test - 1
+                        </div>
+                    </div>
+                    <div className={styles.flexItem} style={{'background-image': 'url(/thomfjordEP.jpeg)'}}>
+                        <div className={styles.releaseTag}>
+                            This is a test - 2
                         </div>
                     </div>
                     {contentCards}
