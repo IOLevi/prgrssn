@@ -28,28 +28,35 @@ export default function Home({data}) {
             <Header/>
             <Topnav/>
 
-            <div className={styles.wesMainContainer}>
-                <img src={'/wesgarage.jpeg'} alt={"Le Youth"} className={styles.wesImage}/>
-            </div>
-
-            <div className={styles.releaseText}>
-                Releases
-            </div>
-
             <div>
-                <main className={styles.flexContainer}>
-                    <div className={styles.flexItem}>
-                        <div className={styles.releaseTag}>
-                            This is a test - 1
+                <div className={styles.bannerContainer}>
+                    <img className={styles.outNowBanner} src={'/intrastellarBanner.jpeg'} alt={"Intrastellar Out Now"}/>
+                </div>
+
+                <div className={styles.wesMainContainer}>
+                    <img src={'/wesgarage.jpeg'} alt={"Le Youth"} className={styles.wesImage}/>
+                </div>
+
+
+                <div className={styles.releaseText}>
+                    Releases
+                </div>
+
+                <div>
+                    <main className={styles.flexContainer}>
+                        <div className={styles.flexItem}>
+                            <div className={styles.releaseTag}>
+                                This is a test - 1
+                            </div>
                         </div>
-                    </div>
-                    <div className={styles.flexItem} style={{'background-image': 'url(/thomfjordEP.jpeg)'}}>
-                        <div className={styles.releaseTag}>
-                            This is a test - 2
+                        <div className={styles.flexItem} style={{'background-image': 'url(/thomfjordEP.jpeg)'}}>
+                            <div className={styles.releaseTag}>
+                                This is a test - 2
+                            </div>
                         </div>
-                    </div>
-                    {contentCards}
-                </main>
+                        {contentCards}
+                    </main>
+                </div>
             </div>
         </>
     );
