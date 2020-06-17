@@ -39,7 +39,7 @@ export default function Home({data}) {
 
 
                 <div className={styles.releaseText}>
-                    Releases
+                    releases
                 </div>
 
                 <div>
