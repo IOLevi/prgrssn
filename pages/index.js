@@ -29,6 +29,10 @@ export default function Home({data}) {
             <Topnav/>
 
             <div>
+                {/* EVAN: INSTALL REACT BOOTSTRAP AND ADD AN IMAGE CAROUSEL TO HAVE MULTIPLE BANNERS
+                https://medium.com/@onesinus231/build-simple-news-app-using-next-js-react-bootstrap-af10d76d3486
+                https://react-bootstrap.github.io/components/carousel/
+                */}
                 <div className={styles.bannerContainer}>
                     <img className={styles.outNowBanner} src={'/intrastellarBanner.jpeg'} alt={"Intrastellar Out Now"}/>
                 </div>
