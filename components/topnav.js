@@ -1,4 +1,4 @@
-import styles from './topnav.less';
+import styles from './topnav.module.css';
 
 export default function Topnav() {
 

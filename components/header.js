@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import styles from './header.less';
 
 export default function Header() {
     return (
