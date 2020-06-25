@@ -6,6 +6,7 @@ import axios from 'axios';
 import Banner from '../components/banner';
 import Releases from '../components/releases';
 import MailingList from "../components/mailinglist";
+import {MongoClient} from "mongodb";
 
 export default function Home({data}) {
 
@@ -30,8 +31,14 @@ export default function Home({data}) {
     );
 }
 export async function getStaticProps() {
-    const res = await axios.get('/api/releases');
-    const data = res.data;
+    const client = new MongoClient(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_ADDRESS}?retryWrites=true&w=majority`, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    });
+    if (!client.isConnected()) await client.connect();
+    const releases = await client.db(process.env.DB_NAME).collection('releases').findOne();
+    const test = JSON.stringify(releases);
+    const data = JSON.parse(test);
 
-    return {props: {data,}}
+    return {props: {data:data,}}
 }
