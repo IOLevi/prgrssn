@@ -1,14 +1,17 @@
 import Header from '../components/header';
 import Topnav from "../components/topnav";
 import styles from '../components/home.module.css';
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import Banner from '../components/banner';
 import Releases from '../components/releases';
 import MailingList from "../components/mailinglist";
 import {MongoClient} from "mongodb";
+import {Modal} from "react-bootstrap";
 
 export default function Home({data}) {
+
+    const [showModal, setShowModal] = useState(true);
 
     return (
         <>
@@ -27,6 +30,13 @@ export default function Home({data}) {
                 <MailingList/>
 
             </div>
+
+            <Modal show={showModal} onHide={()=>setShowModal(false)}>
+                <Modal.Header closeButton>
+                    <Modal.Title style={{fontWeight: 'bolder'}}>Livestream Saturday June 27</Modal.Title>
+                </Modal.Header>
+                <img src={'/livestream.jpg'} alt={"Livestream announcement"} className={styles.announcement}/>
+            </Modal>
         </>
     );
 }

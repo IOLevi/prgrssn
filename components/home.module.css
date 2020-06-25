@@ -5,6 +5,11 @@
 .wesImage {
   width: 100%;
 }
-
-
+.announcement{
+  width: 100%;
+  height: auto;
+}
+.modalTitle{
+  font-weight: bolder;
+}
 /*# sourceMappingURL=home.module.css.map */
