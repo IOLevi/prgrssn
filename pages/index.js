@@ -30,7 +30,7 @@ export default function Home({data}) {
     );
 }
 export async function getStaticProps() {
-    const res = await axios.get('http://localhost:3000/api/releases');
+    const res = await axios.get('/api/releases');
     const data = res.data;
 
     return {props: {data,}}
