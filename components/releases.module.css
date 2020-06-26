@@ -2,6 +2,11 @@
     display: flex;
     flex-flow: row wrap;
 }
+@media(max-width: 650px) {
+    .flexContainer {
+        justify-content: center;
+    }
+}
 .flexItem {
     height: 300px;
     width: 300px;

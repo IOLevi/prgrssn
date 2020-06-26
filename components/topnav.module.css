@@ -1,8 +1,8 @@
-.topnavContainer {
-  height: 50px;
-}
 .topnav {
-  display: block;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: baseline;
+  justify-content: space-between;
   width: 100%;
   height: 50px;
   color: black;
@@ -13,9 +13,14 @@
 .prgrssnTag {
   position: relative;
   left: 10px;
-  font-size: 32px;
+  font-size: 29px;
   font-family: sans-serif;
   cursor: pointer;
   user-select: none;
+}
+
+.topnav img {
+  height: 24px;
+  width: 24px;
 }
 /*# sourceMappingURL=topnav.module.css.map */
