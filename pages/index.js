@@ -1,7 +1,7 @@
 import Header from '../components/header';
 import Topnav from "../components/topnav";
 import styles from '../components/home.module.css';
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import axios from 'axios';
 import Banner from '../components/banner';
 import Releases from '../components/releases';
@@ -11,7 +11,12 @@ import {Modal} from "react-bootstrap";
 
 export default function Home({data}) {
 
-    const [showModal, setShowModal] = useState(true);
+    const [showModal, setShowModal] = useState(false);
+    const modalIntervalRef = useRef({});
+
+    useEffect(() => {
+        modalIntervalRef.current = setInterval(() => setShowModal(true), 3000);
+    }, []);
 
     return (
         <>
@@ -31,7 +36,7 @@ export default function Home({data}) {
 
             </div>
 
-            <Modal show={showModal} onHide={()=>setShowModal(false)}>
+            <Modal show={showModal} onShow={()=>{clearInterval(modalIntervalRef.current)}} onHide={()=>setShowModal(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title style={{fontWeight: 'bolder'}}>Livestream Saturday June 27</Modal.Title>
                 </Modal.Header>
