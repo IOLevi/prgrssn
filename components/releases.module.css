@@ -5,15 +5,23 @@
 .flexItem {
     height: 300px;
     width: 300px;
-    background-image: url('/prgrssn-logo400x400.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
     margin: 5px 10px;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
+    display: flex;
 }
+
+.flexItem img {
+    transition: transform .5s ease;
+    height: 300px;
+    width: 300px;
+}
+
+.flexItem:hover img {
+    transform: scale(1.1);
+}
+
 .flexItem:hover .releaseTag {
     visibility: visible;
 }

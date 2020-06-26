@@ -2,7 +2,6 @@ import Header from '../components/header';
 import Topnav from "../components/topnav";
 import styles from '../components/home.module.css';
 import React, {useEffect, useState, useRef} from "react";
-import axios from 'axios';
 import Banner from '../components/banner';
 import Releases from '../components/releases';
 import MailingList from "../components/mailinglist";
@@ -38,7 +37,7 @@ export default function Home({data}) {
 
             <Modal show={showModal} onShow={()=>{clearInterval(modalIntervalRef.current)}} onHide={()=>setShowModal(false)}>
                 <Modal.Header closeButton>
-                    <Modal.Title style={{fontWeight: 'bolder'}}>Livestream Saturday June 27</Modal.Title>
+                    <Modal.Title style={{fontWeight: 'bolder'}}><a href={'https://www.youtube.com/watch?v=CNj9XOi9QiI'} target="_blank">Livestream Saturday June 27</a></Modal.Title>
                 </Modal.Header>
                 <img src={'/livestream.jpg'} alt={"Livestream announcement"} className={styles.announcement}/>
             </Modal>
