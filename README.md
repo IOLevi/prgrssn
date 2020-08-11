@@ -1,3 +1,14 @@
+## PRGGRSSN LABEL SITE
+Sample website submitted to the Prgrssn music label as a pro-bono project. 
+
+Features:
+- Next.js framework
+- Server Side Rendering (pulls data at build step and generates a static artifact for deployment)
+- Hosting on Vercel (repo tracking for CI/CD, private env variables)
+- Data model using Mongo AtlasDB
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
